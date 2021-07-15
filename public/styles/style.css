@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Qahiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+html, * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans';
+
+  /* variables */
+  --green: #355B34;
+  --primary-yellow: #E6C061;
+  --secondary-yellow: #A07A32;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #E7EEDD;
+}
+
+main .title {
+  font-size: 50px;
+  margin-bottom: 3rem;
+  color: var(--primary-yellow);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
+.countdown-dashboard {
+  width: 550px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.countdown-dashboard .box { 
+  background: var(--green);
+
+  border: 4px solid var(--secondary-yellow);
+  float: left; 
+  margin: 0 10px 0 0;
+  width: 100px;
+  height: 80px;
+  padding: 15px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.countdown-dashboard .box p { 
+  font-size: 40px;  
+  color:var(--primary-yellow);
+  text-shadow: 2px 2px 1px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  
+  margin: 0px; 
+  text-align: center; 
+}
+
+.countdown-dashboard .box-title { 
+  font-size: 25px; 
+  color: var(--primary-yellow);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  clear:both; 
+  display:block; 
+}
+
+main .is-it-today {
+  margin-top: 10vh;
+}
+
+
+
+@media(max-width: 600px) {
+  main {
+    justify-content: space-evenly;
+  }
+
+  main .title {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 8vw;
+    text-align: center;
+  }
+
+  .countdown-dashboard {
+    height: 70vh;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 1rem;
+  }
+
+  .countdown-dashboard .box { 
+    height: 13%;
+    width: 70%;
+  }
+
+  .countdown-dashboard .box p {
+    font-size: 30px; 
+  }
+
+  main .is-it-today {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+}
